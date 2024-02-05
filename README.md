@@ -12,6 +12,7 @@
 Explore the world of cinema with our brand-new app! Dive into films from different countries, immerse yourself in various genres, and experience different eras through captivating movies. All in one place!
 
 Our features:
+
 • Extensive Movie Collection: From dramas to comedies, classics to contemporary films. Our library includes the best films from various countries and periods.
 
 • Premiere Schedule: Stay updated on all upcoming releases. Keep track of premiere dates to ensure you don't miss out on eagerly anticipated movie releases and fresh hits.
