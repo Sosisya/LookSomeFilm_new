@@ -1,4 +1,4 @@
-### [LookSomeFilm](https://apps.apple.com/ru/app/makesomefood/id6449434835)
+### [LookSomeFilm (tap to look on App Store](https://apps.apple.com/ru/app/makesomefood/id6449434835.)
 
 <img src="https://img.shields.io/badge/MVVM clean-ff69b4" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
