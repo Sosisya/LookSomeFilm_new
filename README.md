@@ -2,6 +2,7 @@
 
 <img src="https://img.shields.io/badge/MVVM clean-ff69b4" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
+<img src="https://img.shields.io/badge/Async/await-orange" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/Realm-green" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/Alamofire-yellow" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/REST API-red" alt="MVC" /></a>
