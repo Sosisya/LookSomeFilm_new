@@ -25,4 +25,4 @@ Our features:
 Discover the exciting world of cinema right now! Immerse yourself in the art of movies and create your unique list of favorite films with our app.
 
 
-<img width="1200" alt="Снимок экрана 2023-11-16 в 19 52 23" src="https://github.com/Sosisya/LookSomeFilm_new/assets/96905634/3f8ffc81-b088-401e-a557-45c49225e7cf">
+<img width="1200" alt="Снимок экрана 2023-11-16 в 19 52 23" src="https://github.com/Sosisya/LookSomeFilm_new/assets/96905634/7efb5e47-8d2b-4e1e-aff2-8e35a700e4ef">
