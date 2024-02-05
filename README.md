@@ -3,11 +3,11 @@
 
 <img src="https://img.shields.io/badge/MVVM clean-ff69b4" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
+<img src="https://img.shields.io/badge/SnapKit-blue" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/Async/await-orange" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/Realm-green" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/Alamofire-yellow" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/REST API-red" alt="MVC" /></a>
-<img src="https://img.shields.io/badge/HIG-blue" alt="MVC" /></a>
 
 Explore the world of cinema with our brand-new app! Dive into films from different countries, immerse yourself in various genres, and experience different eras through captivating movies. All in one place!
 
