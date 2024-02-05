@@ -1,4 +1,4 @@
-### [LookSomeFilm (tap to look on App Store](https://apps.apple.com/ru/app/makesomefood/id6449434835.)
+### [LookSomeFilm (tap to look on App Store)](https://apps.apple.com/ru/app/makesomefood/id6449434835.)
 
 <img src="https://img.shields.io/badge/MVVM clean-ff69b4" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
@@ -21,4 +21,4 @@ Our features:
 Discover the exciting world of cinema right now! Immerse yourself in the art of movies and create your unique list of favorite films with our app.
 
 
-<img width="755" alt="Снимок экрана 2023-11-16 в 19 52 23" src="https://github.com/Sosisya/MakeSomeFood_new/assets/96905634/855fa122-c40f-4abd-b51c-811ea3d6e635">
+<img width="755" alt="Снимок экрана 2023-11-16 в 19 52 23" src="https://github.com/Sosisya/LookSomeFilm_new/assets/96905634/3f8ffc81-b088-401e-a557-45c49225e7cf">
