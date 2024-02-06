@@ -1,6 +1,6 @@
 ### LookSomeFilm
 
-[Take a look at the AppStore](https://apps.apple.com/ru/app/makesomefood/id6449434835.)
+[Take a look at the AppStore](https://apps.apple.com/ru/app/looksomefilm/id6477273806)
 
 <img src="https://img.shields.io/badge/MVVM clean-ff69b4" alt="MVC" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
