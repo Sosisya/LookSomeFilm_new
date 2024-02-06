@@ -100,14 +100,14 @@ final class FavouriteView: UIView {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateData),
-            name: NSNotification.Name("FavouriteObjectAddedNotification"),
+            name: NSNotification.Name(NotificationTitles.added),
             object: nil
         )
 
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateData),
-            name: NSNotification.Name("FavouriteObjectDeletedNotification"),
+            name: NSNotification.Name(NotificationTitles.deleted),
             object: nil
         )
     }
@@ -130,7 +130,7 @@ extension FavouriteView: FavouriteViewProtocol {
     }
 
     func displayError() {
-#warning("JTBD: Alert")
+        debugPrint("Error")
     }
 }
 

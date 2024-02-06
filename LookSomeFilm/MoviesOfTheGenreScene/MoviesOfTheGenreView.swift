@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol MoviesOfTheGenreViewProtocol: AnyObject {
-    func displayData(id: Int, viewModel: MoviesOfGenre)
+    func displayData(id: Int, viewModel: MoviesOfGenre, title: String)
     func displayTitle(title: String)
     func displayError()
 }
@@ -77,10 +77,11 @@ final class MoviesOfTheGenreView: UIView {
 }
 
 extension MoviesOfTheGenreView: MoviesOfTheGenreViewProtocol {
-    func displayData(id: Int, viewModel: MoviesOfGenre) {
+    func displayData(id: Int, viewModel: MoviesOfGenre, title: String) {
         guard let movies = viewModel.results else { return }
+        navigationView.titleLabel.text = title
         currentID = id
-        
+
         if moviesOfTheGenre?.count ?? 0 > 0 {
             moviesOfTheGenre?.append(contentsOf: movies)
         } else {
@@ -89,7 +90,7 @@ extension MoviesOfTheGenreView: MoviesOfTheGenreViewProtocol {
     }
 
     func displayError() {
-        debugPrint("error")
+        debugPrint("Error")
     }
 
     func displayTitle(title: String) {
@@ -106,7 +107,7 @@ extension MoviesOfTheGenreView: UITableViewDelegate, UITableViewDataSource {
         
         if offsetY > contentHeight - height {
             currentPage += 1
-            interactor?.getData(id: currentID, page: currentPage)
+//            interactor?.getData(id: currentID, page: currentPage)
         }
     }
 

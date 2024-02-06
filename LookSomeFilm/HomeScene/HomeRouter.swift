@@ -25,6 +25,8 @@ final class HomeRouter: HomeRouterProtocol {
     }
 
     func presentAlert(alert: UIAlertController) {
-        viewController?.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.viewController?.present(alert, animated: true, completion: nil)
+        }
     }
 }

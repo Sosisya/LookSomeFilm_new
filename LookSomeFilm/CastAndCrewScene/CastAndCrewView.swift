@@ -75,7 +75,7 @@ final class CastAndCrewView: UIView, CastAndCrewViewProtocol {
     }
 
     func displayError() {
-    #warning("JTBD: Добавить системный алерт который обсуждали")
+        debugPrint("Error")
     }
 }
 

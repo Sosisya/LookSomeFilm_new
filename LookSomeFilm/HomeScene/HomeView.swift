@@ -68,7 +68,7 @@ extension HomeView: HomeViewProtocol {
     }
 
     func showAlert() {
-        let alertController = UIAlertController(title: "Ошибка", message: "Произошла ошибка!", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: "Error", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
 

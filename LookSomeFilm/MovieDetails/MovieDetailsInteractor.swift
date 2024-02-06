@@ -43,7 +43,6 @@ final class MovieDetailsInteractor: MovieDetailsInteractorProtocol {
         }
     }
 
-    #warning("JTBD: Обработать ошибки показывая соответствующие алерты в презентер и далее во вью")
     func saveData(id: Int, movieDetails: MovieDetails) {
         let realmObjects = realm.fetch()
 
@@ -59,7 +58,7 @@ final class MovieDetailsInteractor: MovieDetailsInteractorProtocol {
                     voteAverage: movieDetails.voteAverage
                 )
                 try realm.createUpdate(object: favouriteModel)
-                NotificationCenter.default.post(name: NSNotification.Name("FavouriteObjectAddedNotification"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(NotificationTitles.added), object: nil)
             } catch {
                 presenter?.presentError()
             }
@@ -76,9 +75,9 @@ final class MovieDetailsInteractor: MovieDetailsInteractorProtocol {
 
             guard let firstObject = favouriteObject.first else { return }
             try realm.delete(object: firstObject)
-            NotificationCenter.default.post(name: NSNotification.Name("FavouriteObjectDeletedNotification"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(NotificationTitles.deleted), object: nil)
         } catch {
-            print("Ошибка удаления в Realm. MoviesOfTheGenre")
+            print("Ошибка удаления в Realm")
         }
     }
 }

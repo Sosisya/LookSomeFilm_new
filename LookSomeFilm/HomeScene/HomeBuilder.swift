@@ -26,7 +26,7 @@ final class HomeBuilder {
         view.router = router
         router.viewController = vc
         
-        interactor.getData()
+        interactor.getData(page: 1)
         
         return vc
     }

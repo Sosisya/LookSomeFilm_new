@@ -8,7 +8,7 @@
 import Foundation
 
 protocol  MoviesOfTheGenrePresenterProtocol: AnyObject {
-    func presentData(id: Int, response: MoviesOfGenre?)
+    func presentData(id: Int, response: MoviesOfGenre?, title: String?)
     func presentTitle(title: String)
     func presentError()
 }
@@ -17,9 +17,10 @@ final class MoviesOfTheGenrePresenter: MoviesOfTheGenrePresenterProtocol {
 
     var view: MoviesOfTheGenreViewProtocol?
 
-    func presentData(id: Int, response: MoviesOfGenre?) {
+    func presentData(id: Int, response: MoviesOfGenre?, title: String?) {
         guard let response = response else { return }
-        view?.displayData(id: id, viewModel: response)
+        guard let title = title else { return }
+        view?.displayData(id: id, viewModel: response, title: title)
     }
 
     func presentError() {

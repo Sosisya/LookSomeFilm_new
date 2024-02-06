@@ -42,3 +42,15 @@ enum NavigationTitles {
     static let genres = "Genres"
     static let favourites = "Favourites"
 }
+
+enum HomeSectionTitles {
+    static let popularTitle = "Popular"
+    static let topRatedTitle = "Top rated"
+    static let upcomingTitle = "Upcoming"
+    static let nowPlayingTitle = "Now playing"
+}
+
+enum NotificationTitles {
+    static let added = "FavouriteObjectAddedNotification"
+    static let deleted = "FavouriteObjectDeletedNotification"
+}

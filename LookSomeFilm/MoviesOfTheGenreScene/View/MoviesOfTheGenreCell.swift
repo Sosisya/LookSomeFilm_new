@@ -185,10 +185,9 @@ class MoviesOfTheGenreCell: UITableViewCell {
         }
 
         if let movieScore = movieOfTheGenre.voteAverage {
-            scoreOfMovieLabel.text = String(describing: movieScore)
+            scoreOfMovieLabel.text = String(format:"%.01f", movieScore)
             scoreOfMovieImageView.tintColor = movieScore < 6.9 ? .customDarkGray : .customGreen
         }
-
         movieTitleLabel.text = movieOfTheGenre.title
         releaseDateOfMovieLabel.text = movieOfTheGenre.releaseDate
     }

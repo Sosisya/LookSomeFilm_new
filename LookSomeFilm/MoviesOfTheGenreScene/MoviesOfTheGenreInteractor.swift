@@ -9,7 +9,7 @@ import Foundation
 import Realm
 
 protocol MoviesOfTheGenreInteractorProtocol: AnyObject {
-    func getData(id: Int?, page: Int?)
+    func getData(id: Int?, page: Int?, title: String?)
     func saveData(model: Result)
     func deleteData(id: Int?)
     func setTitle(title: String?)
@@ -28,7 +28,7 @@ final class MoviesOfTheGenreInteractor: MoviesOfTheGenreInteractorProtocol {
     }
 
     
-    func getData(id: Int?, page: Int?) {
+    func getData(id: Int?, page: Int?, title: String?) {
         guard let page = page else { return }
 
         Task {
@@ -37,7 +37,7 @@ final class MoviesOfTheGenreInteractor: MoviesOfTheGenreInteractorProtocol {
                 let moviesOfTheGenre = try await api.getMoviesOfTheGenre(id: id, page: page)
                 
                 DispatchQueue.main.async {
-                    self.presenter?.presentData(id: id, response: moviesOfTheGenre)
+                    self.presenter?.presentData(id: id, response: moviesOfTheGenre, title: title)
                 }
             } catch {
                 presenter?.presentError()
@@ -60,7 +60,7 @@ final class MoviesOfTheGenreInteractor: MoviesOfTheGenreInteractorProtocol {
                     voteAverage: model.voteAverage
                 )
                 try realm.createUpdate(object: favouriteModel)
-                NotificationCenter.default.post(name: NSNotification.Name("FavouriteObjectAddedNotification"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(NotificationTitles.added), object: nil)
             } catch {
                 presenter?.presentError()
             }
@@ -74,7 +74,7 @@ final class MoviesOfTheGenreInteractor: MoviesOfTheGenreInteractorProtocol {
             let favouriteObject = realmObjects.filter { $0.id == id }
             guard let firstObject = favouriteObject.first else { return }
             try realm.delete(object: firstObject)
-            NotificationCenter.default.post(name: NSNotification.Name("FavouriteObjectDeletedNotification"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(NotificationTitles.deleted), object: nil)
         } catch {
             presenter?.presentError()
         }

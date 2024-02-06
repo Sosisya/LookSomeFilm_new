@@ -18,22 +18,22 @@ final class HomePresenter: HomePresenterProtocol {
 
     func presentData(popular: Popular?, upcoming: Upcoming?, topRated: TopRated?, nowPlaying: NowPlaying?) {
         if let popularResult = popular?.results {
-            model.append(HomeModel(section: .popular(popularResult), title: "Popular")
+            model.append(HomeModel(section: .popular(popularResult), title: HomeSectionTitles.popularTitle)
             )
         }
 
         if let upcomingResult = upcoming?.results {
-            model.append(HomeModel(section: .upcoming(upcomingResult), title: "Upcoming")
+            model.append(HomeModel(section: .upcoming(upcomingResult), title: HomeSectionTitles.upcomingTitle)
             )
         }
 
         if let topRatedResult = topRated?.results {
-            model.append(HomeModel(section: .topRated(topRatedResult), title: "Top rated")
+            model.append(HomeModel(section: .topRated(topRatedResult), title: HomeSectionTitles.topRatedTitle)
             )
         }
 
         if let nowPlayingResult = nowPlaying?.results {
-            model.append(HomeModel(section: .nowPlaying(nowPlayingResult), title: "Now playing")
+            model.append(HomeModel(section: .nowPlaying(nowPlayingResult), title: HomeSectionTitles.nowPlayingTitle)
             )
         }
         view?.displayData(viewModel: model)

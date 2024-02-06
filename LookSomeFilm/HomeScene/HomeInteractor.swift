@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeInteractorProtocol: AnyObject {
-    func getData()
+    func getData(page: Int?)
 }
 
 final class HomeInteractor: HomeInteractorProtocol {
@@ -20,13 +20,15 @@ final class HomeInteractor: HomeInteractorProtocol {
         self.api = api
     }
 
-    func getData() {
+    func getData(page: Int?) {
+        guard let page = page else { return }
+
         Task {
             do {
-                async let popular = api.getPopular()
-                async let upcoming = api.getUpcoming()
-                async let topRated = api.getTopRated()
-                async let nowPlaying = api.getNowPlaying()
+                async let popular = api.getPopular(page: page)
+                async let upcoming = api.getUpcoming(page: page)
+                async let topRated = api.getTopRated(page: page)
+                async let nowPlaying = api.getNowPlaying(page: page)
 
                 let (popularData, upcomingData, topRatedData, nowPlayingData) = try await (popular, upcoming, topRated, nowPlaying)
 

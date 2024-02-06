@@ -83,7 +83,7 @@ extension MovieDetailsView: MovieDetailsViewProtocol {
     }
 
     func displayError() {
-#warning("JTBD: Алерт")
+        debugPrint("Error")
     }
 }
 

@@ -26,8 +26,7 @@ final class MoviesOfTheGenreBuilder {
         view.router = router
         router.viewController = vc
 
-        interactor.getData(id: id, page: 1)
-        interactor.setTitle(title: title)
+        interactor.getData(id: id, page: 1, title: title)
         
         return vc
     }
